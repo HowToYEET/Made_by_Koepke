@@ -1,0 +1,77 @@
+body{
+  background-color: rgb(211, 211, 211);
+}
+
+main {
+  position: absolute;
+  font-display: none;
+}
+#second { 
+  position: absolute;
+}
+.common {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  cursor: pointer;
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+}
+.common:active{
+  animation-name: shake;
+  animation-duration: .2s;
+}
+a {
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  border-width: 0%;
+  display: inline-block;
+  margin: 0;
+  margin-right: 15vh;
+  text-transform:uppercase;
+}
+a:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px #000000;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+a:hover {
+  cursor: pointer;
+}
+a:hover:after{
+    transform: scaleX(1);
+}
+a:after {
+  transform-origin: 0% 50%;
+}
+.table{
+    height: 200px;
+    width: 300px;
+    border-style: solid;
+}
+.arrow{
+  font-size: 200%;
+}
+@keyframes shake{
+  0%{
+    transform: rotate(2deg);
+  }
+  25%{
+    transform: rotate(-2deg);
+  }
+  50%{
+    transform: rotate(2deg);
+  }
+  75%{
+    transform: rotate(-2deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+
+}
+
+
